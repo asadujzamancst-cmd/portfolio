@@ -518,7 +518,7 @@ function Contact() {
 
         {/* Social Links */}
         <div style={{ marginTop: 72, paddingTop: 48, borderTop: "1px solid rgba(164, 50, 156, 0.06)", display: "flex", justifyContent: "center", gap: 32 }}>
-          {[["GitHub", "⌥", "#"], ["LinkedIn", "in", "#"], ["Twitter", "𝕏", "#"], ["Email", "@", "mailto:your@email.com"]].map(([name, icon, href]) => (
+          {[["GitHub", "⌥", "https://github.com/asadujzamancst-cmd"], ["youtube", "Y", "https://www.youtube.com/@azsaasstudio"], ["facebook", "F", "https://www.facebook.com/profile.php?id=61571667248926"], ["Email", "@", "asadujzaman.cst@gmail.com"]].map(([name, icon, href]) => (
             <a key={name} href={href}
               style={{ fontFamily: "'Space Mono', monospace", fontSize: 12, color: "white", textDecoration: "none", letterSpacing: 1, transition: "color 0.2s", display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}
               onMouseEnter={e => e.currentTarget.style.color = "#1feca4"}
