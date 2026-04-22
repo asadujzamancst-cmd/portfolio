@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Logo from "./assets/Logo.png";
 const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
 
+
 const SKILLS = [
   { name: "React", level: 92, icon: "⚛️" },
   { name: "JavaScript", level: 88, icon: "🟨" },
@@ -92,45 +93,110 @@ function Cursor() {
   );
 }
 
+
 function Navbar({ active, setActive }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: scrolled ? "rgba(5,5,15,0.9)" : "transparent",
-      backdropFilter: scrolled ? "blur(16px)" : "none",
+      background: scrolled || menuOpen ? "rgba(5,5,15,0.95)" : "transparent",
+      backdropFilter: scrolled || menuOpen ? "blur(16px)" : "none",
       borderBottom: scrolled ? "1px solid rgba(0,245,160,0.08)" : "none",
       transition: "all 0.4s ease",
-      padding: "0 5%",
-      display: "flex", alignItems: "center", justifyContent: "space-between",
-      height: 68,
+      fontFamily: "'Space Mono', monospace",
     }}>
-      <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 18, color: "#00f5a0", letterSpacing: 1.5, fontWeight: 700 }}>
-        AZSaaSStudio
-      </span>
-      <div style={{ display: "flex", gap: 36 }}>
+      {/* Top bar */}
+      <div style={{
+        padding: "0 5%", display: "flex",
+        alignItems: "center", justifyContent: "space-between", height: 68,
+      }}>
+        <span style={{ fontSize: 18, color: "#00f5a0", letterSpacing: 1.5, fontWeight: 200 }}>
+          AZSaaSStudio
+        </span>
+
+        {/* Desktop links */}
+        <div style={{ display: "flex", gap: 36, "@media(max-width:768px)": { display: "none" } }}
+          className="desktop-links">
+          {NAV_LINKS.map(n => (
+            <a key={n} href={`#${n.toLowerCase()}`}
+              onClick={() => setActive(n)}
+              style={{
+                fontSize: 13, letterSpacing: 1.5,
+                color: active === n ? "#00f5a0" : "rgba(255,255,255,0.55)",
+                textDecoration: "none", transition: "color 0.2s",
+                textTransform: "uppercase",
+              }}
+            >{n}</a>
+          ))}
+        </div>
+
+        {/* Hamburger button */}
+        <button
+          onClick={() => setMenuOpen(o => !o)}
+          className="hamburger-btn"
+          style={{
+            display: "none", flexDirection: "column",
+            gap: 5, background: "none", border: "none",
+            cursor: "pointer", padding: 8,
+          }}
+          aria-label="Toggle menu"
+        >
+          {[0, 1, 2].map(i => (
+            <span key={i} style={{
+              display: "block", width: 22, height: 1.5,
+              background: "#00f5a0",
+              transition: "all 0.3s ease",
+              transformOrigin: "center",
+              transform:
+                menuOpen && i === 0 ? "translateY(6.5px) rotate(45deg)" :
+                menuOpen && i === 2 ? "translateY(-6.5px) rotate(-45deg)" : "none",
+              opacity: menuOpen && i === 1 ? 0 : 1,
+            }} />
+          ))}
+        </button>
+      </div>
+
+      {/* Mobile dropdown menu */}
+      <div style={{
+        overflow: "hidden",
+        maxHeight: menuOpen ? 400 : 0,
+        opacity: menuOpen ? 1 : 0,
+        transition: "max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease",
+        borderTop: menuOpen ? "1px solid rgba(0,245,160,0.08)" : "none",
+      }}
+        className="mobile-menu">
         {NAV_LINKS.map(n => (
           <a key={n} href={`#${n.toLowerCase()}`}
-            onClick={() => setActive(n)}
+            onClick={() => { setActive(n); setMenuOpen(false); }}
             style={{
-              fontFamily: "'Space Mono', monospace",
-              fontSize: 13,
-              letterSpacing: 1.5,
+              display: "flex", justifyContent: "space-between", alignItems: "center",
+              padding: "16px 8%", fontSize: 12, letterSpacing: 2,
+              textTransform: "uppercase", textDecoration: "none",
               color: active === n ? "#00f5a0" : "rgba(255,255,255,0.55)",
-              textDecoration: "none",
+              borderBottom: "1px solid rgba(0,245,160,0.05)",
               transition: "color 0.2s",
-              textTransform: "uppercase",
             }}
-            onMouseEnter={e => e.target.style.color = "#00f5a0"}
-            onMouseLeave={e => e.target.style.color = active === n ? "#00f5a0" : "rgba(255,255,255,0.55)"}
-          >{n}</a>
+          >
+            {n}
+            <span style={{ fontSize: 10, opacity: active === n ? 1 : 0.3 }}>→</span>
+          </a>
         ))}
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .desktop-links { display: none !important; }
+          .hamburger-btn { display: flex !important; }
+        }
+      `}</style>
     </nav>
   );
 }
