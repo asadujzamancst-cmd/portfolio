@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "./assets/Logo.png";
+import image from "./assets/image.png";
 const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
 
 const SKILLS = [
@@ -389,7 +390,7 @@ function About() {
               </div>
             ))}
           </div>
-          <a href="/resume.pdf" download style={{
+          <a href={image} download style={{
             display: "inline-flex", alignItems: "center", gap: 10,
             padding: "12px 28px", border: "1.5px solid rgba(0,245,160,0.3)",
             color: "#00f5a0", fontFamily: "'Space Mono', monospace", fontSize: 12,
