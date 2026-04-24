@@ -287,7 +287,7 @@ useEffect(() => {
       <div style={{ position: "absolute", width: "60vw", height: "60vw", maxWidth: 500, maxHeight: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(0,245,160,0.08) 0%, transparent 70%)", top: "10%", left: "-15%", filter: "blur(40px)", animation: "float1 8s ease-in-out infinite" }} />
       <div style={{ position: "absolute", width: "50vw", height: "50vw", maxWidth: 400, maxHeight: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%)", bottom: "10%", right: "-15%", filter: "blur(40px)", animation: "float2 10s ease-in-out infinite" }} />
 
-      <div style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: 700 }}>
+      <div style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: 700,marginTop: 70 }}>
         <p style={{ fontFamily: "'Space Mono', monospace", color: "#00f5a0", fontSize: 13, letterSpacing: 4, marginBottom: 24, opacity: 0.8 }}>
           HELLO, WORLD. I AM
         </p>
