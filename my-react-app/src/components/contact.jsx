@@ -12,10 +12,7 @@ const contact = () => {
      
         return (
           <section id="contact" ref={ref} style={{ padding: "120px 5%", background: "rgba(255,255,255,0.01)", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-           
-                     {/* Title
-
-               <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+            <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
               <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.7s ease" }}>
                 <p style={{ fontFamily: "'Space Mono', monospace", color: "#00f5a0", fontSize: 12, letterSpacing: 4, marginBottom: 12 }}>GET IN TOUCH</p>
                 <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Let's Work Together</h2>
@@ -54,7 +51,6 @@ const contact = () => {
                   </div>
                 )}
               </div>
-               */}
       
               {/* Social Links */}
               <div style={{ marginTop: 72, paddingTop: 48, borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", justifyContent: "center", gap: 32 }}>

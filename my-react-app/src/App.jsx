@@ -294,7 +294,7 @@ useEffect(() => {
         </p>
         <h1 style={{
           fontFamily: "'Clash Display', 'Playfair Display', Georgia, serif",
-          fontSize: "clamp(28px, 8vw, 110px)",
+          fontSize: "clamp(28px, 8vw, 90px)",
           fontWeight: 700, lineHeight: 1.1,
           background: "linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.6) 100%)",
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
@@ -513,6 +513,7 @@ function Contact() {
 
   return (
     <section id="contact" ref={ref} style={{ padding: "120px 6%", background: "rgba(255,255,255,0.01)", borderTop: "1px solid rgba(255,255,255,0.04)", width: "100%", boxSizing: "border-box" }}>
+    {/* Decorative blobs 
       <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
         <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.7s ease" }}>
           <p style={{ fontFamily: "'Space Mono', monospace", color: "#00f5a0", fontSize: 12, letterSpacing: 4, marginBottom: 12 }}>GET IN TOUCH</p>
@@ -552,6 +553,7 @@ function Contact() {
             </div>
           )}
         </div>
+        */}
 
         <div style={{ marginTop: 72, paddingTop: 48, borderTop: "1px solid rgba(164, 50, 156, 0.06)", display: "flex", justifyContent: "center", gap: 32 }}>
           {[["GitHub", "⌥", "https://github.com/asadujzamancst-cmd"], ["YouTube", "Y", "https://www.youtube.com/@azsaasstudio"], ["Facebook", "F", "https://www.facebook.com/profile.php?id=61571667248926"], ["Email", "@", "mailto:asadujzaman.cst@gmail.com"]].map(([name, icon, href]) => (
@@ -565,7 +567,7 @@ function Contact() {
             </a>
           ))}
         </div>
-      </div>
+     
     </section>
   );
 }
