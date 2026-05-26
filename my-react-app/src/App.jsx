@@ -18,42 +18,72 @@ const SKILLS = [
 const PROJECTS = [
   {
     id: 1,
-    title: "ResTurant management system",
-    desc: "Full-stack e-commerce platform with cart, auth, and payment gateway integration.",
-    tags: ["React", "Django", "MySQL", "Stripe"],
+   
+    title: "Restaurant Management System",
+    desc: "Full-stack restaurant management system with order handling, authentication, and admin dashboard,rider management.",
+    tags: ["React", "Django", "MySQL"],
     color: "#00f5a0",
     link: "#",
     github: "#",
   },
   {
     id: 2,
-    title: "LIbrary management system",
-    desc: "Drag-and-drop project management app inspired by Notion and Trello.",
-    tags: ["React", "TypeScript", "Mysql", "Django"],
+    title: "Library Management System",
+    
+    desc: "Digital library system for managing books, users, and borrowing records with admin control.",
+    tags: ["React", "TypeScript", "Django", "MySQL"],
     color: "#7c3aed",
     link: "#",
     github: "#",
   },
   {
     id: 3,
-    title: "WeatherSphere",
-    desc: "Real-time weather dashboard with geolocation and animated forecast cards.",
-    tags: ["React", "OpenWeather API", "Framer"],
+    
+    title: "Bulk Mail Sender",
+    desc: "Send multiple personalized emails at once using CSV upload with attachment support.",
+    tags: ["React", "Node.js", "Nodemailer", "CSV"],
     color: "#f59e0b",
     link: "#",
     github: "#",
   },
   {
     id: 4,
-    title: "ChatBOt",
-    desc: "Working on it — AI-powered chat app with streaming responses and markdown rendering.",
-    tags: ["React", "OpenAI API", "Node.js"],
+    title: "Chat system in website",
+    desc: "Real-time chat system for websites using WebSockets, allowing instant messaging between users and support agents.",
+    tags: ["React", "Django", "WebSocket"],
     color: "#ef4444",
     link: "#",
     github: "#",
   },
-];
+  {
+    id: 5,
+    title: "E-commerce Website",
+    desc: "Modern e-commerce platform with product listing, cart system, and payment integration.",
+    tags: ["React", "Next.js", "Django", "MySQL"],
+    color: "#8b5cf6",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 6,
+    title: "Personal Portfolio",
+    desc: "A sleek personal portfolio website to showcase projects and skills, built with React and Tailwind CSS.",
+    tags: ["React", "Tailwind CSS"],
+    color: "#10b981",
+    link: "#",
+    github: "#",
 
+  },
+  {
+    id: 7,
+    title: "School Management System",
+    desc: "Comprehensive school management system for handling student records, attendance, grades, and communication.",
+    tags: ["React", "Django", "MySQL"],
+    color: "#f59e0b",
+    link: "#",
+    github: "#",
+  }
+];
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
