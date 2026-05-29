@@ -543,6 +543,25 @@ function Contact() {
 
   return (
     <section id="contact" ref={ref} style={{ padding: "120px 6%", background: "rgba(255,255,255,0.01)", borderTop: "1px solid rgba(255,255,255,0.04)", width: "100%", boxSizing: "border-box" }}>
+      <div className="mt-8 flex justify-center">
+  <a
+    href="https://wa.me/8801797320260"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-green-500/10 border border-green-500/20 hover:bg-green-500 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300"
+  >
+    <div className="text-2xl">💬</div>
+
+    <div>
+      <p className="text-white font-semibold group-hover:text-black">
+        WhatsApp Me
+      </p>
+      <p className="text-white/50 text-sm group-hover:text-black/70">
+        Fast response within minutes
+      </p>
+    </div>
+  </a>
+</div>
     {/* Decorative blobs 
       <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
         <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.7s ease" }}>
