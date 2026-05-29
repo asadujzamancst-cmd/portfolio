@@ -543,25 +543,42 @@ function Contact() {
 
   return (
     <section id="contact" ref={ref} style={{ padding: "120px 6%", background: "rgba(255,255,255,0.01)", borderTop: "1px solid rgba(255,255,255,0.04)", width: "100%", boxSizing: "border-box" }}>
-      <div className="mt-8 flex justify-center">
-  <a
-    href="https://wa.me/8801797320260"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-green-500/10 border border-green-500/20 hover:bg-green-500 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300"
-  >
-    <div className="text-2xl">💬</div>
+  <div className="max-w-5xl mx-auto text-center">
+    <p className="text-[#00f5a0] text-sm tracking-[4px] mb-3">
+      CONTACT ME
+    </p>
 
-    <div>
-      <p className="text-white font-semibold group-hover:text-black">
-        WhatsApp Me
-      </p>
-      <p className="text-white/50 text-sm group-hover:text-black/70">
-        Fast response within minutes
-      </p>
+    <h2 className="text-white text-4xl font-bold mb-4">
+      Let's Connect
+    </h2>
+
+    <p className="text-white/50 max-w-lg mx-auto mb-10">
+      Need a website, SaaS solution, or want to discuss a project?
+      Message me directly on WhatsApp.
+    </p>
+
+    {/* WhatsApp Button */}
+    <div className="flex justify-center">
+      <a
+        href="https://wa.me/8801797320260"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center gap-4 px-7 py-5 rounded-2xl bg-green-500/10 border border-green-500/20 hover:bg-green-500 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105"
+      >
+        <div className="text-4xl">💬</div>
+
+        <div className="text-left">
+          <p className="text-white text-lg font-semibold group-hover:text-black transition">
+            WhatsApp Me
+          </p>
+
+          <p className="text-white/50 text-sm group-hover:text-black/70 transition">
+            Fast response within minutes
+          </p>
+        </div>
+      </a>
     </div>
-  </a>
-</div>
+  </div>
     {/* Decorative blobs 
       <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
         <div style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.7s ease" }}>
