@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "./assets/552283821_785207207650855_3652127371700890113_n.jpg";
 import image from "./assets/image.png";
+import whats from "./assets/pngtree-whatsapp-icon-png-image_3584845.jpg";
+
 const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
 
 const SKILLS = [
@@ -582,7 +584,10 @@ function Contact() {
               rel="noopener noreferrer"
               className="group flex items-center gap-4 px-7 py-5 rounded-2xl bg-green-500/10 border border-green-500/20 hover:bg-green-500 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105"
             >
-              <div className="text-4xl">💬</div>
+              <div className="text-4xl">
+              
+               <span><img src={whats} alt="Logo" style={{ width: "20px", height: "20px", objectFit: "cover" }} /></span>
+              </div>
 
               <div className="text-left">
                 <p className="text-white text-lg font-semibold group-hover:text-black transition">
