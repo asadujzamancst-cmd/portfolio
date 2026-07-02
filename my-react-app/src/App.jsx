@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "./assets/552283821_785207207650855_3652127371700890113_n.jpg";
-import image from "./assets/image.png";
+import image from "./assets/Screenshot 2026-07-03 024708.png";
 import whats from "./assets/pngtree-whatsapp-icon-png-image_3584845.jpg";
 
 const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
